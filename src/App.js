@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         HEllo THERE1345
         </p>
         <a
           className="App-link"
@@ -23,3 +23,5 @@ function App() {
 }
 
 export default App;
+
+// docker run -p 8000:3000 -v /app/node_modules -v C:\Users\Danny\PycharmProjects\prod\frontend:/app -e CHOKIDAR_USEPOLLING=true volumetest1
