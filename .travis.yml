@@ -1,0 +1,10 @@
+language: generic
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t testflow1 -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true testflow1 npm run test
