@@ -8,3 +8,16 @@ before_install:
 
 script:
   - docker run -e CI=true testflow1 npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "testflow2"
+  env: "Testflow2-env"
+  bucker_name: "elasticbeanstalk-us-east-1-592062117776"
+  bucket_path: "testflow2"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
